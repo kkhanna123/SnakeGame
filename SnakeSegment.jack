@@ -16,7 +16,7 @@ class SnakeSegment {
 
 	// Draw Segment to Screen
 	method void draw() {
-		do Screen.drawRectangle(x+4,y+4,x-4,y-4);
+		do Main.drawSnakeAt(x,y);
 		return;
 	}
 	

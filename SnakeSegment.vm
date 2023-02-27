@@ -12,18 +12,8 @@ function SnakeSegment.draw 0
 push argument 0
 pop pointer 0
 push this 0
-push constant 4
-add
 push this 1
-push constant 4
-add
-push this 0
-push constant 4
-sub
-push this 1
-push constant 4
-sub
-call Screen.drawRectangle 4
+call Main.drawSnakeAt 2
 pop temp 0
 push constant 0
 return

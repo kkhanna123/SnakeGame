@@ -1,3 +1,12 @@
 function Main.Main 0
 push constant 0
 return
+function Main.drawSnakeAt 0
+push constant 0
+return
+function Main.drawFoodAt 0
+push constant 0
+return
+function Main.drawWallAt 0
+push constant 0
+return

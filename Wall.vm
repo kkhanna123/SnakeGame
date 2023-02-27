@@ -12,14 +12,46 @@ push argument 3
 pop this 3
 push pointer 0
 return
-function Wall.draw 0
+function Wall.draw 2
 push argument 0
 pop pointer 0
 push this 0
+pop local 0
 push this 1
+pop local 1
+label WHILE_EXP0
+push local 0
 push this 2
+lt
+push constant 1
+add
+not
+if-goto WHILE_END0
+label WHILE_EXP1
+push local 1
 push this 3
-call Screen.drawRectangle 4
+lt
+push constant 1
+add
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call Main.drawWallAt 2
 pop temp 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+push this 1
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
 push constant 0
 return

@@ -4,4 +4,17 @@ class Main {
 		return;
 	}
 
+	// Draw Individual Objects at some space in the grid
+	function void drawSnakeAt(int x, int y) {
+		return;
+	}
+
+	function void drawFoodAt(int x, int y) {
+		return;
+	}
+
+	function void drawWallAt(int x, int y) {
+		return;
+	}
+
 }

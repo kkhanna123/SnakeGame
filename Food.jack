@@ -22,12 +22,13 @@ class Food {
 	
 	// Draw Segment
 	method void draw() {
-		// FILL IN
+		do Main.drawFoodAt(x,y);
 		return;
 	}
 
-	method void move() {
-		// FILL IN
+	method void move(int newX, int newY) {
+		let x = newX;
+		let y= newY;
 		return;
 	}
 
