@@ -1,0 +1,28 @@
+class Wall {
+
+	field int x1;
+	field int y1;
+	field int x2;
+	field int y2;
+
+	/** Constructs a new Wall Object */
+
+	constructor Wall new(int xO, int yO, int xT, int yT) {
+
+		let x1 = xO;
+		let y1 = yO;
+		let x2 = xT;
+		let y2 = yT;
+
+		return this;
+	}
+
+	// Draw Segment to Screen
+	method void draw() {
+		do Screen.drawRectangle(x1,y1,x2,y2);
+		return;
+	}
+	
+
+
+}

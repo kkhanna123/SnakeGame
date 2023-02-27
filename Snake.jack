@@ -1,6 +1,6 @@
 class Snake {
 
-	field Array snakeArr; // Array to hold the snake
+	field Array arr; // Array to hold the snake
 	field int direction; // 1 = up, 2 = right, 3 = down, 4 = left
 	field int length; // Length of snake so I can just create a single massive array
 
@@ -11,21 +11,15 @@ class Snake {
 		// Snake head at 0, Snake tail at length-1
 		var int numSquares;
 		let numSquares = gridX*gridY;
-		let snakeArr = Array.new(numSquares);
+		let arr = Array.new(numSquares);
 
 		// Initialize direction to right, length to 2 
 		let direction = 2;
 		let length = 2;
 
 
-		var int firstX;
-		var int firstY;
-
-		let firstX = gridX/4;
-		let firstY = gridY/2;
-
-		let arr[0] = SnakeSegment(firstX,firstY);
-		let arr[1] = SnakeSegment(firstX-1,firstY);
+		let arr[0] = SnakeSegment.new(gridX/4,gridY/2);
+		let arr[1] = SnakeSegment.new((gridX/4)-1,gridY/2);
 
 		return this;
 	}
