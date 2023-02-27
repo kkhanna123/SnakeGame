@@ -1,0 +1,25 @@
+
+
+class SnakeSegment {
+
+	field int x;
+	field int y;
+
+	/** Constructs a new Snake Segment Object */
+	constructor SnakeSegment new(int xVal, int yVal) {
+
+		let x = xVal;
+		let y = yVal;
+
+		return this;
+	}
+
+	// Draw Segment to Screen
+	method void draw() {
+		do Screen.drawRectangle(x+4,y+4,x-4,y-4);
+		return;
+	}
+	
+
+
+}

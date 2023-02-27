@@ -1,0 +1,36 @@
+class Food {
+
+	field int x;
+	field int y;
+
+	field int nutrition;
+
+	
+
+	/** Constructs a new Food Object */
+	constructor Food new(int xVal, int yVal) {
+
+		let x = xVal;
+		let y = yVal;
+
+		let nutrition = 5;
+
+		return this;
+	}
+
+
+	
+	// Draw Segment
+	method void draw() {
+		// FILL IN
+		return;
+	}
+
+	method void move() {
+		// FILL IN
+		return;
+	}
+
+
+
+}

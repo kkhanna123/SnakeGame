@@ -1,0 +1,3 @@
+function Main.Main 0
+push constant 0
+return
