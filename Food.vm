@@ -44,9 +44,10 @@ return
 function Food.draw 0
 push argument 0
 pop pointer 0
+push argument 1
 push this 0
 push this 1
-call SnakeGame.drawFoodAt 2
+call SnakeGame.drawFoodAt 3
 pop temp 0
 push constant 0
 return

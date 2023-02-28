@@ -43,8 +43,8 @@ class Food {
 
 	
 	// Draw Segment
-	method void draw() {
-		do SnakeGame.drawFoodAt(x,y);
+	method void draw(SnakeGame game) {
+		do game.drawFoodAt(x,y);
 		return;
 	}
 

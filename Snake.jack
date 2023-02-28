@@ -27,17 +27,6 @@ class Snake {
 		return this;
 	}
 
-	// Draw snake by drawing all parts of the snake
-	method void draw() {
-		var int i;
-		var SnakeSegment seg;
-		let i = 0;
-		while (i < length) {
-			let seg = arr[i];
-			do seg.draw();
-		}
-		return;
-	}
 
 	method void changeDirection(int newDir) {
 		let direction = newDir;
@@ -92,6 +81,25 @@ class Snake {
 			do seg.setXY(oldX,oldY);
 			let arr[0] = seg;
 		}
+
+		return;
+	}
+
+
+	// Draw snake by drawing all parts of the snake
+	method void draw(SnakeGame game) {
+		var int i;
+		var SnakeSegment seg;
+		let i = 0;
+		while (i < length) {
+			let seg = arr[i];
+			do seg.draw(game);
+
+			let i = i+1;
+
+		}
+
+
 
 		return;
 	}

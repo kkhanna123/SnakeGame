@@ -1,4 +1,6 @@
 class SnakeGame {
+	static SnakeGame game;
+
 	field boolean gameStarted;
 	field boolean gameFinished;
 
@@ -7,13 +9,31 @@ class SnakeGame {
 
 	field int squareWidth; 
 
+	field Snake snake;
+	field Food food;
+	field Array walls;
+
 	constructor SnakeGame new() {
 
 		let gameStarted = false;
 		let gameFinished = false;
-		let gridLength = 10;
-		let gridWidth = 10;
-		let squareWidth = 10;
+		let gridLength = 32; // Parallel to X axis
+		let gridWidth = 16; // Parallel to Y axis
+		let squareWidth = 16;
+
+		let game = this;
+
+		let snake  = Snake.new(gridLength,gridWidth);
+		let food = Food.new(15,12);
+
+		
+		let walls = Array.new(4);
+		let walls[0] = Wall.new(0,0,gridLength-1,0);
+		let walls[1] = Wall.new(0,0,0,gridWidth-1);
+		let walls[2] = Wall.new(0,gridWidth-1,gridLength-1,gridWidth-1);
+		let walls[3] = Wall.new(gridLength-1,0,gridLength-1,gridWidth-1);
+
+
 
 		return this;
 	}
@@ -21,16 +41,31 @@ class SnakeGame {
 
 
 	method void run() {
-		var int inc;
-		let inc = 0;
+		var char curChar;
+		do Output.printString("Press Enter to Begin!");
 
-		while (inc < 500) {
-			do Screen.drawRectangle(inc+2,0,inc+8,10);
-			let inc = inc+10;
+		while (~(curChar = 128)) {
+			let curChar = Keyboard.readChar();
+			do Sys.wait(10);
 		}
+
+		do Screen.clearScreen();
+
+		do game.updateScreen();
+
+
 
 		return;
 	}
+
+	method void updateScreen() {
+
+		do snake.draw(this);
+		do food.draw(this);
+		return;
+	}
+
+
 
 
 
@@ -45,15 +80,19 @@ class SnakeGame {
 
 
 	// Draw Individual Objects at some space in the grid
-	function void drawSnakeAt(int x, int y) {
+	method void drawSnakeAt(int x, int y) {
+		do Screen.setColor(true);
+		do Screen.drawRectangle(x*squareWidth+1,y*squareWidth+1,((x+1)*squareWidth)-1,((y+1)*squareWidth)-1);
 		return;
 	}
 
-	function void drawFoodAt(int x, int y) {
+	method void drawFoodAt(int x, int y) {
+		do Screen.setColor(true);
+		do Screen.drawRectangle(x*squareWidth+1,y*squareWidth+1,((x+1)*squareWidth)-1,((y+1)*squareWidth)-1);
 		return;
 	}
 
-	function void drawWallAt(int x, int y) {
+	method void drawWallAt(int x, int y) {
 		return;
 	}
 }
