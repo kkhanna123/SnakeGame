@@ -37,14 +37,14 @@ class Food {
 	}
 
 	method void setNutrition(int n) {
-		nutrition = n;
+		let nutrition = n;
 		return;
 	}
 
 	
 	// Draw Segment
 	method void draw() {
-		do Main.drawFoodAt(x,y);
+		do SnakeGame.drawFoodAt(x,y);
 		return;
 	}
 

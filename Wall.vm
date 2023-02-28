@@ -37,7 +37,7 @@ not
 if-goto WHILE_END1
 push local 0
 push local 1
-call Main.drawWallAt 2
+call SnakeGame.drawWallAt 2
 pop temp 0
 push local 1
 push constant 1

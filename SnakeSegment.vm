@@ -32,7 +32,7 @@ push argument 0
 pop pointer 0
 push this 0
 push this 1
-call Main.drawSnakeAt 2
+call SnakeGame.drawSnakeAt 2
 pop temp 0
 push constant 0
 return

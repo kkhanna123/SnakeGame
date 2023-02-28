@@ -1,20 +1,12 @@
 class Main {
+	function void main() {
+		var SnakeGame game;
 
-	function void Main() {
-		return;
-	}
+        let game = SnakeGame.new();
+        do game.run();
+        do game.dispose();
 
-	// Draw Individual Objects at some space in the grid
-	function void drawSnakeAt(int x, int y) {
-		return;
-	}
-
-	function void drawFoodAt(int x, int y) {
-		return;
-	}
-
-	function void drawWallAt(int x, int y) {
-		return;
+        return;
 	}
 
 }

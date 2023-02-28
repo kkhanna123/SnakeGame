@@ -28,7 +28,7 @@ class Wall {
 		while (i<x2+1) {
 
 			while (j<y2+1) {
-				do Main.drawWallAt(i,j);
+				do SnakeGame.drawWallAt(i,j);
 				let j = j+1;
 			}
 

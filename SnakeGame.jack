@@ -1,0 +1,59 @@
+class SnakeGame {
+	field boolean gameStarted;
+	field boolean gameFinished;
+
+	field int gridLength; // Lateral
+	field int gridWidth; // Vertical
+
+	field int squareWidth; 
+
+	constructor SnakeGame new() {
+
+		let gameStarted = false;
+		let gameFinished = false;
+		let gridLength = 10;
+		let gridWidth = 10;
+		let squareWidth = 10;
+
+		return this;
+	}
+
+
+
+	method void run() {
+		var int inc;
+		let inc = 0;
+
+		while (inc < 500) {
+			do Screen.drawRectangle(inc+2,0,inc+8,10);
+			let inc = inc+10;
+		}
+
+		return;
+	}
+
+
+
+	method void dispose() {
+		// FILL IN
+		return;
+	}
+
+
+
+
+
+
+	// Draw Individual Objects at some space in the grid
+	function void drawSnakeAt(int x, int y) {
+		return;
+	}
+
+	function void drawFoodAt(int x, int y) {
+		return;
+	}
+
+	function void drawWallAt(int x, int y) {
+		return;
+	}
+}

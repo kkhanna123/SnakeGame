@@ -30,7 +30,7 @@ class SnakeSegment {
 
 	// Draw Segment to Screen
 	method void draw() {
-		do Main.drawSnakeAt(x,y);
+		do SnakeGame.drawSnakeAt(x,y);
 		return;
 	}
 	
