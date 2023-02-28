@@ -18,6 +18,28 @@ class Food {
 		return this;
 	}
 
+	method int getX() {
+		return x;
+	}
+
+	method int getY() {
+		return y;
+	}
+
+	method int getNutrition() {
+		return nutrition;
+	}
+
+	method void setXY(int xVal, int yVal) {
+		let x = xVal;
+		let y = yVal;
+		return;
+	}
+
+	method void setNutrition(int n) {
+		nutrition = n;
+		return;
+	}
 
 	
 	// Draw Segment
