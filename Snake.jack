@@ -8,10 +8,13 @@ class Snake {
 	/** Constructs a new Snake Object */
 	constructor Snake new(int gridX, int gridY) {
 
+		//
 		// Snake head at 0, Snake tail at length-1
+		//
+
 		var int numSquares;
 		let numSquares = gridX*gridY;
-		let arr = Array.new(numSquares);
+		let arr = Array.new(numSquares+2);
 
 		// Initialize direction to right, length to 2 
 		let direction = 2;
@@ -36,8 +39,60 @@ class Snake {
 		return;
 	}
 
-	method void changeDirection() {
-		// FILL IN  
+	method void changeDirection(int newDir) {
+		let direction = newDir;
+		return;
+	}
+
+
+	method void move(boolean onFood) {
+
+		// Move all Snake Segments one back
+
+		var SnakeSegment oldHead;
+		var SnakeSegment seg;
+		var int oldX;
+		var int oldY;
+
+		var int i;
+		let i = length-1;
+
+		while (i > -1) {
+			let seg = arr[i];
+			let arr[i+1] = seg;
+			let i = i-1;
+		}
+
+		let oldHead = arr[1];
+		let oldX = oldHead.getX();
+		let oldY = oldHead.getY();
+
+
+
+		if (direction = 1) {
+			let oldY = oldY+1;
+		}
+		if (direction = 2) {
+			let oldX = oldX+1;
+		}
+		if (direction = 3) {
+			let oldY = oldY-1;
+		}
+		if (direction = 4) {
+			let oldX = oldX-1;
+		}
+
+
+
+		if (onFood) {
+			let arr[0] = SnakeSegment.new(oldX,oldY);
+			let length = length+1;
+		} else {
+			let seg = arr[length];
+			do seg.setXY(oldX,oldY);
+			let arr[0] = seg;
+		}
+
 		return;
 	}
 
