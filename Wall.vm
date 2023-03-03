@@ -15,13 +15,13 @@ return
 function Wall.draw 2
 push argument 0
 pop pointer 0
-push this 0
+push this 2
 pop local 0
-push this 1
+push this 3
 pop local 1
 label WHILE_EXP0
 push local 0
-push this 2
+push this 0
 lt
 push constant 1
 add
@@ -29,7 +29,7 @@ not
 if-goto WHILE_END0
 label WHILE_EXP1
 push local 1
-push this 3
+push this 1
 lt
 push constant 1
 add
