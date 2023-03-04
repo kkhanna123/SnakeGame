@@ -29,6 +29,12 @@ class Snake {
 
 
 	method void changeDirection(int newDir) {
+		if (direction = (newDir+2)) {
+			return;
+		}
+		if (direction = (newDir-2)) {
+			return;
+		}
 		let direction = newDir;
 		return;
 	}

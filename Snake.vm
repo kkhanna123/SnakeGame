@@ -50,6 +50,28 @@ return
 function Snake.changeDirection 0
 push argument 0
 pop pointer 0
+push this 1
+push argument 1
+push constant 2
+add
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push this 1
+push argument 1
+push constant 2
+sub
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
 push argument 1
 pop this 1
 push constant 0
